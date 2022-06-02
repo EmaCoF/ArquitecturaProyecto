@@ -1,0 +1,42 @@
+﻿@model ArquitecturaProyecto.Models.Producto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Producto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Imagen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Imagen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoProducto.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoProducto.Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdProducto }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

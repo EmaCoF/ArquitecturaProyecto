@@ -1,0 +1,95 @@
+﻿@model IEnumerable<ArquitecturaProyecto.Models.TablaNutricional>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Regresar", "Index", "Menu", null, new { @class = "btn btn-primary", @style = "float:right" })
+</p>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Calorias)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GrasaTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GrasasSaturadas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GrasasTrans)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Colesterol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sodio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarbohidratosTotales)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FibraDietetica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Azucares)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Proteina)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Producto.Nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Calorias)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GrasaTotal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GrasasSaturadas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GrasasTrans)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Colesterol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sodio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarbohidratosTotales)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FibraDietetica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Azucares)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Proteina)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Producto.Nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdTabla }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdTabla }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdTabla })
+        </td>
+    </tr>
+}
+
+</table>

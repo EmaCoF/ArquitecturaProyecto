@@ -1,0 +1,112 @@
+﻿@model ArquitecturaProyecto.Models.TablaNutricional
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TablaNutricional</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Calorias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calorias)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GrasaTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrasaTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GrasasSaturadas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrasasSaturadas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GrasasTrans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrasasTrans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Colesterol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Colesterol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sodio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sodio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CarbohidratosTotales)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarbohidratosTotales)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FibraDietetica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FibraDietetica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Azucares)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Azucares)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Proteina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proteina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Producto.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Producto.Nombre)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

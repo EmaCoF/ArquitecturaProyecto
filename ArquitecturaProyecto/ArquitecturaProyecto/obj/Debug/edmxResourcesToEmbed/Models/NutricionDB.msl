@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="NutricionModelDB">
+    <EntitySetMapping Name="DeficitNutricional">
+      <EntityTypeMapping TypeName="Database1Model.DeficitNutricional">
+        <MappingFragment StoreEntitySet="DeficitNutricional">
+          <ScalarProperty Name="IdDeficit" ColumnName="IdDeficit" />
+          <ScalarProperty Name="IdMinimo" ColumnName="IdMinimo" />
+          <ScalarProperty Name="IdPatologia" ColumnName="IdPatologia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExcesoNutricional">
+      <EntityTypeMapping TypeName="Database1Model.ExcesoNutricional">
+        <MappingFragment StoreEntitySet="ExcesoNutricional">
+          <ScalarProperty Name="IdExceso" ColumnName="IdExceso" />
+          <ScalarProperty Name="IdMaximo" ColumnName="IdMaximo" />
+          <ScalarProperty Name="IdPatologia" ColumnName="IdPatologia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nutriente">
+      <EntityTypeMapping TypeName="Database1Model.Nutriente">
+        <MappingFragment StoreEntitySet="Nutriente">
+          <ScalarProperty Name="IdNutriente" ColumnName="IdNutriente" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NutrienteMaximo">
+      <EntityTypeMapping TypeName="Database1Model.NutrienteMaximo">
+        <MappingFragment StoreEntitySet="NutrienteMaximo">
+          <ScalarProperty Name="IdMaximo" ColumnName="IdMaximo" />
+          <ScalarProperty Name="IdNutriente" ColumnName="IdNutriente" />
+          <ScalarProperty Name="ValorMaximo" ColumnName="ValorMaximo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NutrienteMinimo">
+      <EntityTypeMapping TypeName="Database1Model.NutrienteMinimo">
+        <MappingFragment StoreEntitySet="NutrienteMinimo">
+          <ScalarProperty Name="IdMinimo" ColumnName="IdMinimo" />
+          <ScalarProperty Name="IdNutriente" ColumnName="IdNutriente" />
+          <ScalarProperty Name="ValorMinimo" ColumnName="ValorMinimo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patologia">
+      <EntityTypeMapping TypeName="Database1Model.Patologia">
+        <MappingFragment StoreEntitySet="Patologia">
+          <ScalarProperty Name="IdPatologia" ColumnName="IdPatologia" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producto">
+      <EntityTypeMapping TypeName="Database1Model.Producto">
+        <MappingFragment StoreEntitySet="Producto">
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="IdTipo" ColumnName="IdTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TablaNutricional">
+      <EntityTypeMapping TypeName="Database1Model.TablaNutricional">
+        <MappingFragment StoreEntitySet="TablaNutricional">
+          <ScalarProperty Name="IdTabla" ColumnName="IdTabla" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="Calorias" ColumnName="Calorias" />
+          <ScalarProperty Name="GrasaTotal" ColumnName="GrasaTotal" />
+          <ScalarProperty Name="GrasasSaturadas" ColumnName="GrasasSaturadas" />
+          <ScalarProperty Name="GrasasTrans" ColumnName="GrasasTrans" />
+          <ScalarProperty Name="Colesterol" ColumnName="Colesterol" />
+          <ScalarProperty Name="Sodio" ColumnName="Sodio" />
+          <ScalarProperty Name="CarbohidratosTotales" ColumnName="CarbohidratosTotales" />
+          <ScalarProperty Name="FibraDietetica" ColumnName="FibraDietetica" />
+          <ScalarProperty Name="Azucares" ColumnName="Azucares" />
+          <ScalarProperty Name="Proteina" ColumnName="Proteina" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoProducto">
+      <EntityTypeMapping TypeName="Database1Model.TipoProducto">
+        <MappingFragment StoreEntitySet="TipoProducto">
+          <ScalarProperty Name="IdTipo" ColumnName="IdTipo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

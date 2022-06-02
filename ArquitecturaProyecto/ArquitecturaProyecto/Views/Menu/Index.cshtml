@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Menu</h2>
+
+<br />
+<h4>Registro de productos</h4>
+<div class="hstack gap-3">
+    @Html.ActionLink("Tipo Productos", "Index", "TipoProducto", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Productos", "Index", "Producto", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Tabla Nutricional", "Index", "TablaNutricional", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Tabla Nutricional", "Index", "TablaNutricional", null, new { @class = "btn btn-primary" })
+</div>
+<div class="hstack gap-3">
+    <br />
+    <h4>Logica nutrimental</h4>
+    @Html.ActionLink("Nutrientes", "Index", "Nutriente", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Maximo de nutrientes", "Index", "NutrienteMaximo", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Minimo de nutrientes", "Index", "NutrienteMinimo", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Deficit nutricional", "Index", "DeficitNutricional", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Exceso nutricional", "Index", "ExcesoNutricional", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Patologias", "Index", "Patologia", null, new { @class = "btn btn-primary" })
+</div>

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ArquitecturaProyecto.Models.ExcesoNutricional>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Regresar", "Index", "Menu", null, new { @class = "btn btn-primary", @style = "float:right" })
+</p>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NutrienteMaximo.IdMaximo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Patologia.Nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NutrienteMaximo.IdMaximo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patologia.Nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdExceso }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdExceso }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdExceso })
+        </td>
+    </tr>
+}
+
+</table>

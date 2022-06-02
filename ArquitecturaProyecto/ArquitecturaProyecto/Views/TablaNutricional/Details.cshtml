@@ -1,0 +1,106 @@
+﻿@model ArquitecturaProyecto.Models.TablaNutricional
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TablaNutricional</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Calorias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calorias)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GrasaTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrasaTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GrasasSaturadas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrasasSaturadas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GrasasTrans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrasasTrans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Colesterol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Colesterol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sodio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sodio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CarbohidratosTotales)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarbohidratosTotales)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FibraDietetica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FibraDietetica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Azucares)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Azucares)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Proteina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proteina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Producto.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Producto.Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdTabla }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
