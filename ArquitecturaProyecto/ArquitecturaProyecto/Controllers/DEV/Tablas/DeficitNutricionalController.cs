@@ -39,7 +39,7 @@ namespace ArquitecturaProyecto.Controllers.DEV.Tablas
         // GET: DeficitNutricional/Create
         public ActionResult Create()
         {
-            ViewBag.IdMinimo = new SelectList(db.NutrienteMinimo, "IdMinimo", "IdMinimo");
+            ViewBag.IdMinimo = new SelectList(db.NutrienteMinimo, "IdMinimo", "Nutriente.Nombre");
             ViewBag.IdPatologia = new SelectList(db.Patologia, "IdPatologia", "Nombre");
             return View();
         }
@@ -58,7 +58,7 @@ namespace ArquitecturaProyecto.Controllers.DEV.Tablas
                 return RedirectToAction("Index");
             }
 
-            ViewBag.IdMinimo = new SelectList(db.NutrienteMinimo, "IdMinimo", "IdMinimo", deficitNutricional.IdMinimo);
+            ViewBag.IdMinimo = new SelectList(db.NutrienteMinimo, "IdMinimo", "Nutriente.Nombre", deficitNutricional.IdMinimo);
             ViewBag.IdPatologia = new SelectList(db.Patologia, "IdPatologia", "Nombre", deficitNutricional.IdPatologia);
             return View(deficitNutricional);
         }
@@ -75,7 +75,7 @@ namespace ArquitecturaProyecto.Controllers.DEV.Tablas
             {
                 return HttpNotFound();
             }
-            ViewBag.IdMinimo = new SelectList(db.NutrienteMinimo, "IdMinimo", "IdMinimo", deficitNutricional.IdMinimo);
+            ViewBag.IdMinimo = new SelectList(db.NutrienteMinimo, "IdMinimo", "Nutriente.Nombre", deficitNutricional.IdMinimo);
             ViewBag.IdPatologia = new SelectList(db.Patologia, "IdPatologia", "Nombre", deficitNutricional.IdPatologia);
             return View(deficitNutricional);
         }
@@ -93,7 +93,7 @@ namespace ArquitecturaProyecto.Controllers.DEV.Tablas
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.IdMinimo = new SelectList(db.NutrienteMinimo, "IdMinimo", "IdMinimo", deficitNutricional.IdMinimo);
+            ViewBag.IdMinimo = new SelectList(db.NutrienteMinimo, "IdMinimo", "Nutriente.Nombre", deficitNutricional.IdMinimo);
             ViewBag.IdPatologia = new SelectList(db.Patologia, "IdPatologia", "Nombre", deficitNutricional.IdPatologia);
             return View(deficitNutricional);
         }

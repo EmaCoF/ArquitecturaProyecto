@@ -39,7 +39,7 @@ namespace ArquitecturaProyecto.Controllers.DEV.Tablas
         // GET: ExcesoNutricional/Create
         public ActionResult Create()
         {
-            ViewBag.IdMaximo = new SelectList(db.NutrienteMaximo, "IdMaximo", "IdMaximo");
+            ViewBag.IdMaximo = new SelectList(db.NutrienteMaximo, "IdMaximo", "Nutriente.Nombre");
             ViewBag.IdPatologia = new SelectList(db.Patologia, "IdPatologia", "Nombre");
             return View();
         }
@@ -57,8 +57,8 @@ namespace ArquitecturaProyecto.Controllers.DEV.Tablas
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            ViewBag.IdMaximo = new SelectList(db.NutrienteMaximo, "IdMaximo", "IdMaximo", excesoNutricional.IdMaximo);
+            
+            ViewBag.IdMaximo = new SelectList(db.NutrienteMaximo, "IdMaximo", "Nutriente.Nombre", excesoNutricional.IdMaximo);
             ViewBag.IdPatologia = new SelectList(db.Patologia, "IdPatologia", "Nombre", excesoNutricional.IdPatologia);
             return View(excesoNutricional);
         }
@@ -75,7 +75,7 @@ namespace ArquitecturaProyecto.Controllers.DEV.Tablas
             {
                 return HttpNotFound();
             }
-            ViewBag.IdMaximo = new SelectList(db.NutrienteMaximo, "IdMaximo", "IdMaximo", excesoNutricional.IdMaximo);
+            ViewBag.IdMaximo = new SelectList(db.NutrienteMaximo, "IdMaximo", "Nutriente.Nombre", excesoNutricional.IdMaximo);
             ViewBag.IdPatologia = new SelectList(db.Patologia, "IdPatologia", "Nombre", excesoNutricional.IdPatologia);
             return View(excesoNutricional);
         }
@@ -93,7 +93,7 @@ namespace ArquitecturaProyecto.Controllers.DEV.Tablas
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.IdMaximo = new SelectList(db.NutrienteMaximo, "IdMaximo", "IdMaximo", excesoNutricional.IdMaximo);
+            ViewBag.IdMaximo = new SelectList(db.NutrienteMaximo, "IdMaximo", "Nutriente.Nombre", excesoNutricional.IdMaximo);
             ViewBag.IdPatologia = new SelectList(db.Patologia, "IdPatologia", "Nombre", excesoNutricional.IdPatologia);
             return View(excesoNutricional);
         }

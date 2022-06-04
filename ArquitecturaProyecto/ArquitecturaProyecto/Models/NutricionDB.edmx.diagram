@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fa4ad17190a94889b7514e1bc1a5193c" Name="Diagram1">
+      <Diagram DiagramId="6f6f092b353d4bdeb5ea0bb81760b25d" Name="Diagram1">
         <EntityTypeShape EntityType="Database1Model.DeficitNutricional" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Database1Model.ExcesoNutricional" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Database1Model.Nutriente" Width="1.5" PointX="1.5" PointY="13.5" IsExpanded="true" />
@@ -14,10 +14,10 @@
         <EntityTypeShape EntityType="Database1Model.Producto" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="Database1Model.TablaNutricional" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="Database1Model.TipoProducto" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
-        <AssociationConnector Association="Database1Model.FK__DeficitNu__IdMin__1BC821DD" ManuallyRouted="false" />
-        <AssociationConnector Association="Database1Model.FK__DeficitNu__IdPat__1CBC4616" ManuallyRouted="false" />
-        <AssociationConnector Association="Database1Model.FK__ExcesoNut__IdMax__17036CC0" ManuallyRouted="false" />
-        <AssociationConnector Association="Database1Model.FK__ExcesoNut__IdPat__17F790F9" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK__DeficitNu__IdMin__2A164134" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK__DeficitNu__IdPat__2B0A656D" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK__ExcesoNut__IdMax__2EDAF651" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK__ExcesoNut__IdPat__2FCF1A8A" ManuallyRouted="false" />
         <AssociationConnector Association="Database1Model.FK__Nutriente__IdNut__7C4F7684" ManuallyRouted="false" />
         <AssociationConnector Association="Database1Model.FK__Nutriente__IdNut__7D439ABD" ManuallyRouted="false" />
         <AssociationConnector Association="Database1Model.FK__Producto__IdTipo__628FA481" ManuallyRouted="false" />

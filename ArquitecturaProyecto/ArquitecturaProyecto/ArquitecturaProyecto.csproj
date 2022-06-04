@@ -198,8 +198,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Models\NutricionDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>NutricionDB.Context.cs</LastGenOutput>
       <DependentUpon>NutricionDB.edmx</DependentUpon>
+      <LastGenOutput>NutricionDB.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\NutricionDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -208,6 +208,12 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Assets\AguaWatta600.webp" />
+    <Content Include="Assets\CocaCola355.webp" />
+    <Content Include="Assets\FrijolesRojosToledo156.webp" />
+    <Content Include="Assets\FrijolesVolteadosDucal227.webp" />
+    <Content Include="Assets\LiptomFrambuesa500.webp" />
+    <Content Include="Assets\Pepsi600.webp" />
     <EntityDeploy Include="Models\NutricionDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>NutricionDB.Designer.cs</LastGenOutput>
@@ -240,16 +246,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\DeficitNutricional\Create.cshtml" />
-    <Content Include="Views\DeficitNutricional\Delete.cshtml" />
-    <Content Include="Views\DeficitNutricional\Details.cshtml" />
-    <Content Include="Views\DeficitNutricional\Edit.cshtml" />
-    <Content Include="Views\DeficitNutricional\Index.cshtml" />
-    <Content Include="Views\ExcesoNutricional\Create.cshtml" />
-    <Content Include="Views\ExcesoNutricional\Delete.cshtml" />
-    <Content Include="Views\ExcesoNutricional\Details.cshtml" />
-    <Content Include="Views\ExcesoNutricional\Edit.cshtml" />
-    <Content Include="Views\ExcesoNutricional\Index.cshtml" />
     <Content Include="Views\Nutriente\Create.cshtml" />
     <Content Include="Views\Nutriente\Delete.cshtml" />
     <Content Include="Views\Nutriente\Details.cshtml" />
@@ -286,6 +282,16 @@
     <Content Include="Views\TipoProducto\Edit.cshtml" />
     <Content Include="Views\TipoProducto\Index.cshtml" />
     <Content Include="Views\Menu\Index.cshtml" />
+    <Content Include="Views\DeficitNutricional\Create.cshtml" />
+    <Content Include="Views\DeficitNutricional\Delete.cshtml" />
+    <Content Include="Views\DeficitNutricional\Details.cshtml" />
+    <Content Include="Views\DeficitNutricional\Edit.cshtml" />
+    <Content Include="Views\DeficitNutricional\Index.cshtml" />
+    <Content Include="Views\ExcesoNutricional\Create.cshtml" />
+    <Content Include="Views\ExcesoNutricional\Delete.cshtml" />
+    <Content Include="Views\ExcesoNutricional\Details.cshtml" />
+    <Content Include="Views\ExcesoNutricional\Edit.cshtml" />
+    <Content Include="Views\ExcesoNutricional\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

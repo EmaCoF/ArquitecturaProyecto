@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="IdDeficit" />
           </Key>
-          <Property Name="IdDeficit" Type="int" Nullable="false" />
+          <Property Name="IdDeficit" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdMinimo" Type="int" Nullable="false" />
           <Property Name="IdPatologia" Type="int" Nullable="false" />
         </EntityType>
@@ -17,7 +17,7 @@
           <Key>
             <PropertyRef Name="IdExceso" />
           </Key>
-          <Property Name="IdExceso" Type="int" Nullable="false" />
+          <Property Name="IdExceso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdMaximo" Type="int" Nullable="false" />
           <Property Name="IdPatologia" Type="int" Nullable="false" />
         </EntityType>
@@ -58,7 +58,7 @@
           </Key>
           <Property Name="IdProducto" Type="int" Nullable="false" />
           <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Imagen" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Imagen" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="IdTipo" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="TablaNutricional">
@@ -85,7 +85,7 @@
           <Property Name="IdTipo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <Association Name="FK__DeficitNu__IdMin__1BC821DD">
+        <Association Name="FK__DeficitNu__IdMin__2A164134">
           <End Role="NutrienteMinimo" Type="Self.NutrienteMinimo" Multiplicity="1" />
           <End Role="DeficitNutricional" Type="Self.DeficitNutricional" Multiplicity="*" />
           <ReferentialConstraint>
@@ -97,7 +97,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DeficitNu__IdPat__1CBC4616">
+        <Association Name="FK__DeficitNu__IdPat__2B0A656D">
           <End Role="Patologia" Type="Self.Patologia" Multiplicity="1" />
           <End Role="DeficitNutricional" Type="Self.DeficitNutricional" Multiplicity="*" />
           <ReferentialConstraint>
@@ -109,7 +109,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ExcesoNut__IdMax__17036CC0">
+        <Association Name="FK__ExcesoNut__IdMax__2EDAF651">
           <End Role="NutrienteMaximo" Type="Self.NutrienteMaximo" Multiplicity="1" />
           <End Role="ExcesoNutricional" Type="Self.ExcesoNutricional" Multiplicity="*" />
           <ReferentialConstraint>
@@ -121,7 +121,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ExcesoNut__IdPat__17F790F9">
+        <Association Name="FK__ExcesoNut__IdPat__2FCF1A8A">
           <End Role="Patologia" Type="Self.Patologia" Multiplicity="1" />
           <End Role="ExcesoNutricional" Type="Self.ExcesoNutricional" Multiplicity="*" />
           <ReferentialConstraint>
@@ -191,19 +191,19 @@
           <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TablaNutricional" EntityType="Self.TablaNutricional" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TipoProducto" EntityType="Self.TipoProducto" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__DeficitNu__IdMin__1BC821DD" Association="Self.FK__DeficitNu__IdMin__1BC821DD">
+          <AssociationSet Name="FK__DeficitNu__IdMin__2A164134" Association="Self.FK__DeficitNu__IdMin__2A164134">
             <End Role="NutrienteMinimo" EntitySet="NutrienteMinimo" />
             <End Role="DeficitNutricional" EntitySet="DeficitNutricional" />
           </AssociationSet>
-          <AssociationSet Name="FK__DeficitNu__IdPat__1CBC4616" Association="Self.FK__DeficitNu__IdPat__1CBC4616">
+          <AssociationSet Name="FK__DeficitNu__IdPat__2B0A656D" Association="Self.FK__DeficitNu__IdPat__2B0A656D">
             <End Role="Patologia" EntitySet="Patologia" />
             <End Role="DeficitNutricional" EntitySet="DeficitNutricional" />
           </AssociationSet>
-          <AssociationSet Name="FK__ExcesoNut__IdMax__17036CC0" Association="Self.FK__ExcesoNut__IdMax__17036CC0">
+          <AssociationSet Name="FK__ExcesoNut__IdMax__2EDAF651" Association="Self.FK__ExcesoNut__IdMax__2EDAF651">
             <End Role="NutrienteMaximo" EntitySet="NutrienteMaximo" />
             <End Role="ExcesoNutricional" EntitySet="ExcesoNutricional" />
           </AssociationSet>
-          <AssociationSet Name="FK__ExcesoNut__IdPat__17F790F9" Association="Self.FK__ExcesoNut__IdPat__17F790F9">
+          <AssociationSet Name="FK__ExcesoNut__IdPat__2FCF1A8A" Association="Self.FK__ExcesoNut__IdPat__2FCF1A8A">
             <End Role="Patologia" EntitySet="Patologia" />
             <End Role="ExcesoNutricional" EntitySet="ExcesoNutricional" />
           </AssociationSet>
@@ -233,21 +233,21 @@
           <Key>
             <PropertyRef Name="IdDeficit" />
           </Key>
-          <Property Name="IdDeficit" Type="Int32" Nullable="false" />
+          <Property Name="IdDeficit" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdMinimo" Type="Int32" Nullable="false" />
           <Property Name="IdPatologia" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="NutrienteMinimo" Relationship="Self.FK__DeficitNu__IdMin__1BC821DD" FromRole="DeficitNutricional" ToRole="NutrienteMinimo" />
-          <NavigationProperty Name="Patologia" Relationship="Self.FK__DeficitNu__IdPat__1CBC4616" FromRole="DeficitNutricional" ToRole="Patologia" />
+          <NavigationProperty Name="NutrienteMinimo" Relationship="Self.FK__DeficitNu__IdMin__2A164134" FromRole="DeficitNutricional" ToRole="NutrienteMinimo" />
+          <NavigationProperty Name="Patologia" Relationship="Self.FK__DeficitNu__IdPat__2B0A656D" FromRole="DeficitNutricional" ToRole="Patologia" />
         </EntityType>
         <EntityType Name="ExcesoNutricional">
           <Key>
             <PropertyRef Name="IdExceso" />
           </Key>
-          <Property Name="IdExceso" Type="Int32" Nullable="false" />
+          <Property Name="IdExceso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdMaximo" Type="Int32" Nullable="false" />
           <Property Name="IdPatologia" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="NutrienteMaximo" Relationship="Self.FK__ExcesoNut__IdMax__17036CC0" FromRole="ExcesoNutricional" ToRole="NutrienteMaximo" />
-          <NavigationProperty Name="Patologia" Relationship="Self.FK__ExcesoNut__IdPat__17F790F9" FromRole="ExcesoNutricional" ToRole="Patologia" />
+          <NavigationProperty Name="NutrienteMaximo" Relationship="Self.FK__ExcesoNut__IdMax__2EDAF651" FromRole="ExcesoNutricional" ToRole="NutrienteMaximo" />
+          <NavigationProperty Name="Patologia" Relationship="Self.FK__ExcesoNut__IdPat__2FCF1A8A" FromRole="ExcesoNutricional" ToRole="Patologia" />
         </EntityType>
         <EntityType Name="Nutriente">
           <Key>
@@ -265,7 +265,7 @@
           <Property Name="IdMaximo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdNutriente" Type="Int32" Nullable="false" />
           <Property Name="ValorMaximo" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
-          <NavigationProperty Name="ExcesoNutricional" Relationship="Self.FK__ExcesoNut__IdMax__17036CC0" FromRole="NutrienteMaximo" ToRole="ExcesoNutricional" />
+          <NavigationProperty Name="ExcesoNutricional" Relationship="Self.FK__ExcesoNut__IdMax__2EDAF651" FromRole="NutrienteMaximo" ToRole="ExcesoNutricional" />
           <NavigationProperty Name="Nutriente" Relationship="Self.FK__Nutriente__IdNut__7C4F7684" FromRole="NutrienteMaximo" ToRole="Nutriente" />
         </EntityType>
         <EntityType Name="NutrienteMinimo">
@@ -275,7 +275,7 @@
           <Property Name="IdMinimo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdNutriente" Type="Int32" Nullable="false" />
           <Property Name="ValorMinimo" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
-          <NavigationProperty Name="DeficitNutricional" Relationship="Self.FK__DeficitNu__IdMin__1BC821DD" FromRole="NutrienteMinimo" ToRole="DeficitNutricional" />
+          <NavigationProperty Name="DeficitNutricional" Relationship="Self.FK__DeficitNu__IdMin__2A164134" FromRole="NutrienteMinimo" ToRole="DeficitNutricional" />
           <NavigationProperty Name="Nutriente" Relationship="Self.FK__Nutriente__IdNut__7D439ABD" FromRole="NutrienteMinimo" ToRole="Nutriente" />
         </EntityType>
         <EntityType Name="Patologia">
@@ -285,8 +285,8 @@
           <Property Name="IdPatologia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="DeficitNutricional" Relationship="Self.FK__DeficitNu__IdPat__1CBC4616" FromRole="Patologia" ToRole="DeficitNutricional" />
-          <NavigationProperty Name="ExcesoNutricional" Relationship="Self.FK__ExcesoNut__IdPat__17F790F9" FromRole="Patologia" ToRole="ExcesoNutricional" />
+          <NavigationProperty Name="DeficitNutricional" Relationship="Self.FK__DeficitNu__IdPat__2B0A656D" FromRole="Patologia" ToRole="DeficitNutricional" />
+          <NavigationProperty Name="ExcesoNutricional" Relationship="Self.FK__ExcesoNut__IdPat__2FCF1A8A" FromRole="Patologia" ToRole="ExcesoNutricional" />
         </EntityType>
         <EntityType Name="Producto">
           <Key>
@@ -294,7 +294,7 @@
           </Key>
           <Property Name="IdProducto" Type="Int32" Nullable="false" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Imagen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Imagen" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="IdTipo" Type="Int32" Nullable="false" />
           <NavigationProperty Name="TipoProducto" Relationship="Self.FK__Producto__IdTipo__628FA481" FromRole="Producto" ToRole="TipoProducto" />
           <NavigationProperty Name="TablaNutricional" Relationship="Self.FK__TablaNutr__IdPro__5FB337D6" FromRole="Producto" ToRole="TablaNutricional" />
@@ -325,7 +325,7 @@
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Producto" Relationship="Self.FK__Producto__IdTipo__628FA481" FromRole="TipoProducto" ToRole="Producto" />
         </EntityType>
-        <Association Name="FK__DeficitNu__IdMin__1BC821DD">
+        <Association Name="FK__DeficitNu__IdMin__2A164134">
           <End Role="NutrienteMinimo" Type="Self.NutrienteMinimo" Multiplicity="1" />
           <End Role="DeficitNutricional" Type="Self.DeficitNutricional" Multiplicity="*" />
           <ReferentialConstraint>
@@ -337,7 +337,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DeficitNu__IdPat__1CBC4616">
+        <Association Name="FK__DeficitNu__IdPat__2B0A656D">
           <End Role="Patologia" Type="Self.Patologia" Multiplicity="1" />
           <End Role="DeficitNutricional" Type="Self.DeficitNutricional" Multiplicity="*" />
           <ReferentialConstraint>
@@ -349,7 +349,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ExcesoNut__IdMax__17036CC0">
+        <Association Name="FK__ExcesoNut__IdMax__2EDAF651">
           <End Role="NutrienteMaximo" Type="Self.NutrienteMaximo" Multiplicity="1" />
           <End Role="ExcesoNutricional" Type="Self.ExcesoNutricional" Multiplicity="*" />
           <ReferentialConstraint>
@@ -361,7 +361,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ExcesoNut__IdPat__17F790F9">
+        <Association Name="FK__ExcesoNut__IdPat__2FCF1A8A">
           <End Role="Patologia" Type="Self.Patologia" Multiplicity="1" />
           <End Role="ExcesoNutricional" Type="Self.ExcesoNutricional" Multiplicity="*" />
           <ReferentialConstraint>
@@ -431,19 +431,19 @@
           <EntitySet Name="Producto" EntityType="Self.Producto" />
           <EntitySet Name="TablaNutricional" EntityType="Self.TablaNutricional" />
           <EntitySet Name="TipoProducto" EntityType="Self.TipoProducto" />
-          <AssociationSet Name="FK__DeficitNu__IdMin__1BC821DD" Association="Self.FK__DeficitNu__IdMin__1BC821DD">
+          <AssociationSet Name="FK__DeficitNu__IdMin__2A164134" Association="Self.FK__DeficitNu__IdMin__2A164134">
             <End Role="NutrienteMinimo" EntitySet="NutrienteMinimo" />
             <End Role="DeficitNutricional" EntitySet="DeficitNutricional" />
           </AssociationSet>
-          <AssociationSet Name="FK__DeficitNu__IdPat__1CBC4616" Association="Self.FK__DeficitNu__IdPat__1CBC4616">
+          <AssociationSet Name="FK__DeficitNu__IdPat__2B0A656D" Association="Self.FK__DeficitNu__IdPat__2B0A656D">
             <End Role="Patologia" EntitySet="Patologia" />
             <End Role="DeficitNutricional" EntitySet="DeficitNutricional" />
           </AssociationSet>
-          <AssociationSet Name="FK__ExcesoNut__IdMax__17036CC0" Association="Self.FK__ExcesoNut__IdMax__17036CC0">
+          <AssociationSet Name="FK__ExcesoNut__IdMax__2EDAF651" Association="Self.FK__ExcesoNut__IdMax__2EDAF651">
             <End Role="NutrienteMaximo" EntitySet="NutrienteMaximo" />
             <End Role="ExcesoNutricional" EntitySet="ExcesoNutricional" />
           </AssociationSet>
-          <AssociationSet Name="FK__ExcesoNut__IdPat__17F790F9" Association="Self.FK__ExcesoNut__IdPat__17F790F9">
+          <AssociationSet Name="FK__ExcesoNut__IdPat__2FCF1A8A" Association="Self.FK__ExcesoNut__IdPat__2FCF1A8A">
             <End Role="Patologia" EntitySet="Patologia" />
             <End Role="ExcesoNutricional" EntitySet="ExcesoNutricional" />
           </AssociationSet>
