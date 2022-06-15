@@ -1,0 +1,47 @@
+﻿@model ArquitecturaProyecto.Models.CatalogoViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Catalogo</h2>
+<div class="row">
+    @using (Html.BeginForm("index", "Aplicacion", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <label>Buscar por categoria</label>
+        if (Model.Filtro)
+        {
+            @Html.ActionLink("Eliminar filtros", "Index",null , new { @class = "btn btn-danger" })
+        }
+        <div class="btn-group" data-toggle="buttons" style="margin-left:2rem; margin-right:2rem">
+            @foreach (var item in Model.categorias)
+            {
+                <label class="btn btn-default">
+                    <input id="@item.IdTipo" type="checkbox" name="Categorias" value="@item.IdTipo"> @item.Nombre
+                </label>
+            }
+        </div>
+
+        <input type="submit" value="Filtrar" class="btn btn-warning" />
+    }
+</div>
+<div class="row">
+
+@foreach (var item in Model.productos)
+{
+
+    <div class="panel panel-default" style="float:left; margin:2%">
+        <div class="panel-heading">
+            <img src=~/Assets/@(item.Imagen).webp class="card-img-top" alt="...">
+        </div>
+
+        <div class="panel-body">
+            <h5 class="card-title">@item.Nombre</h5>
+            @Html.ActionLink("Ver producto", "Detalle", new { id = item.IdProducto }, new { @class = "btn btn-primary" })
+        </div>
+    </div>
+
+}
+</div>

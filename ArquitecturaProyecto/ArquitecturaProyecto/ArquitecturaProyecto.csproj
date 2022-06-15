@@ -136,12 +136,15 @@
     <Compile Include="Controllers\DEV\Tablas\TablaNutricionalController.cs" />
     <Compile Include="Controllers\DEV\Tablas\TipoProductoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Main\AplicacionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CatalogoViewModel.cs" />
     <Compile Include="Models\DeficitNutricional.cs">
       <DependentUpon>NutricionDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DetalleViewModel.cs" />
     <Compile Include="Models\ExcesoNutricional.cs">
       <DependentUpon>NutricionDB.tt</DependentUpon>
     </Compile>
@@ -221,6 +224,20 @@
     <Content Include="Models\NutricionDB.edmx.diagram">
       <DependentUpon>NutricionDB.edmx</DependentUpon>
     </Content>
+    <Content Include="Assets\AtunAguaSardimar170.webp" />
+    <Content Include="Assets\AvenaBananoQuaker40.webp" />
+    <Content Include="Assets\BarraFrootLoops120.webp" />
+    <Content Include="Assets\CanelaSasson3.webp" />
+    <Content Include="Assets\CebollaMorada.webp" />
+    <Content Include="Assets\Cebollin.webp" />
+    <Content Include="Assets\Cilantro.webp" />
+    <Content Include="Assets\EspaguetiRoma200.webp" />
+    <Content Include="Assets\HuevosGranhazul.webp" />
+    <Content Include="Assets\Papa.webp" />
+    <Content Include="Assets\SalAjoMalher6.webp" />
+    <Content Include="Assets\SopaIna70.webp" />
+    <Content Include="Assets\TomateManzano.webp" />
+    <Content Include="Assets\SopaNogshim120.webp" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -292,8 +309,12 @@
     <Content Include="Views\ExcesoNutricional\Details.cshtml" />
     <Content Include="Views\ExcesoNutricional\Edit.cshtml" />
     <Content Include="Views\ExcesoNutricional\Index.cshtml" />
+    <Content Include="Views\Aplicacion\Index.cshtml" />
+    <Content Include="Views\Aplicacion\Detalle.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Catalogo\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

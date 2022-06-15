@@ -1,0 +1,45 @@
+﻿@model ArquitecturaProyecto.Models.DetalleViewModel
+
+@{
+    ViewBag.Title = "Detalle";
+}
+
+<br />
+@Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-primary" })
+<br />
+<br />
+
+<div class="row">
+    <div class="col-sm-4">
+        <img src=~/Assets/@(Model.producto.Imagen).webp class="card-img-top img-responsive" alt="...">
+    </div>
+    <div class="col-sm-8">
+        <h2>@Model.producto.Nombre</h2>
+        <br />
+
+
+        @Html.ActionLink("Agregar a la lista", "Agregar al carrito", null, new { @class = "btn btn-warning" })
+    </div>
+
+</div>
+
+<div class="row">
+    @foreach (var item in Model.lista)
+    {
+        <div class="col-sm-6">
+            <p style="margin:0px">Cantidad de @item.Nombre: @item.valor sobre @item.ValorMinimo necesarios</p>
+            <div class="progress" style="height: 4rem; border: 2px solid black">
+                <div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" style="width:@(item.porcentaje1)% ; height:2rem">
+                    @item.Nombre
+                </div>
+                <br>
+                <div class="progress-bar progress-bar-warning" role="progressbar" style="width:@(item.porcentaje2)%"></div>
+                <div class="progress-bar progress-bar-success" role="progressbar" style="width:@(item.porcentaje3)%">
+                    Recomendacion
+                </div>
+                <div class="progress-bar progress-bar-danger" role="progressbar" style="width:@(item.porcentaje4)%"></div>
+            </div>
+        </div>
+
+    }
+</div>
