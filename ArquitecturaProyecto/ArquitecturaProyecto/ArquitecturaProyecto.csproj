@@ -140,6 +140,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CarritoModel.cs" />
     <Compile Include="Models\CatalogoViewModel.cs" />
     <Compile Include="Models\DeficitNutricional.cs">
       <DependentUpon>NutricionDB.tt</DependentUpon>
@@ -163,6 +164,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NutricionDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\NutricionViewModel.cs" />
     <Compile Include="Models\Nutriente.cs">
       <DependentUpon>NutricionDB.tt</DependentUpon>
     </Compile>
@@ -311,6 +313,8 @@
     <Content Include="Views\ExcesoNutricional\Index.cshtml" />
     <Content Include="Views\Aplicacion\Index.cshtml" />
     <Content Include="Views\Aplicacion\Detalle.cshtml" />
+    <Content Include="Views\Aplicacion\Nutricion.cshtml" />
+    <Content Include="Views\Aplicacion\NutricionFalta.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Catalogo\" />

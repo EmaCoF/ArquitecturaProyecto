@@ -8,6 +8,7 @@ namespace ArquitecturaProyecto.Models
     public class DetalleViewModel
     {
         private NutricionModelDB db = new NutricionModelDB();
+        public bool EnCarrito;
         public Producto producto;
         public IEnumerable<ValNutrientes>lista;
 

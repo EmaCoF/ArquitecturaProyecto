@@ -1,0 +1,84 @@
+﻿@model ArquitecturaProyecto.Models.NutricionViewModel
+@{
+    ViewBag.Title = "Nutricion";
+}
+<br />
+<h2>Calculo Nutricional</h2>
+
+<br />
+<div class="row">
+   <div class="col-sm-6">
+       <div class="row">
+
+           <div class="panel panel-default">
+               
+                   <div class="col-sm-7 panel-heading" ><h3>Productos</h3></div>
+                   <div class="col-sm-5 panel-heading"><h3>Cantidad</h3></div>
+               
+               @foreach (var item in Model.ListaProductos)
+               {
+                   <div class="panel-body row">
+                       <div class="col-sm-7">@item.Nombre</div>
+                       <div class="col-sm-3">
+                           @*<h4>*@
+                               @Html.ActionLink("-", "DisminuirCantidad", new {ID=item.Id}, new { @class = "btn btn-warning" })
+                               <button type="button" class="btn btn-default">@item.Cantidad</button>
+                               @Html.ActionLink("+", "AumentarCantidad", new { ID = item.Id }, new { @class = "btn btn-warning" })
+                           @*</h4>*@
+                       </div>
+                       <div class="col-sm-2">
+                           @Html.ActionLink("X", "EliminarProducto", new { ID = item.Id }, new { @class = "btn btn-danger" })
+                       </div>
+                   </div>
+               }
+           </div>
+
+       </div>
+       <div class="row">
+           <div class="panel panel-default">
+               <div class="panel-heading">Posibles patologias por desbalance nutricional</div>
+               <div class="panel-body">
+                   @foreach (var item in Model.patologias)
+                   {
+                       <div class="alert alert-danger">
+                           <strong>@item.Nombre!</strong> @item.Descripcion.
+                       </div>
+                   }
+               </div>
+           </div>
+
+           
+       </div>
+   </div>
+   <div class="col-sm-6">
+       @foreach (var item in Model.lista)
+       {
+           <div class="col-sm-12">
+               <p style="margin:0px">Cantidad de @item.Nombre: @item.valor sobre @item.ValorMinimo necesarios</p>
+               <div class="progress" style="height: 4rem; border: 2px solid black">
+                   @if (item.porcentaje1>(item.porcentaje2+item.porcentaje3) || item.porcentaje1<item.porcentaje2)
+                   {
+                       <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width:@(item.porcentaje1)% ; height:2rem">
+                           @item.Nombre
+                       </div>
+                   }
+                   else
+                   {
+                       <div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" style="width:@(item.porcentaje1)% ; height:2rem">
+                           @item.Nombre
+                       </div>
+                   }
+                   <br>
+                   <div class="progress-bar progress-bar-warning" role="progressbar" style="width:@(item.porcentaje2)%; height:2rem"></div>
+                   <div class="progress-bar progress-bar-success" role="progressbar" style="width:@(item.porcentaje3)%; height:2rem">
+                       Recomendacion
+                   </div>
+                   <div class="progress-bar progress-bar-danger" role="progressbar" style="width:@(item.porcentaje4)%; height:2rem"></div>
+               </div>
+           </div>
+
+       }
+   </div>
+
+</div>
+

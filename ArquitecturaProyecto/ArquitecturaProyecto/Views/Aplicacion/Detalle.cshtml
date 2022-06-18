@@ -17,8 +17,16 @@
         <h2>@Model.producto.Nombre</h2>
         <br />
 
+        @if (Model.EnCarrito == false)
+        {
+            @Html.ActionLink("Agregar a la lista", "AgregarCarrito", new { ID = Model.producto.IdProducto }, new { @class = "btn btn-warning" })
+        }
+        else
+        {
+            @Html.ActionLink("Eliminar de la lista", "EliminarCarrito", new { ID = Model.producto.IdProducto }, new { @class = "btn btn-danger" })
+        }
 
-        @Html.ActionLink("Agregar a la lista", "Agregar al carrito", null, new { @class = "btn btn-warning" })
+
     </div>
 
 </div>
@@ -33,11 +41,11 @@
                     @item.Nombre
                 </div>
                 <br>
-                <div class="progress-bar progress-bar-warning" role="progressbar" style="width:@(item.porcentaje2)%"></div>
-                <div class="progress-bar progress-bar-success" role="progressbar" style="width:@(item.porcentaje3)%">
+                <div class="progress-bar progress-bar-warning" role="progressbar" style="width:@(item.porcentaje2)%; height:2rem"></div>
+                <div class="progress-bar progress-bar-success" role="progressbar" style="width:@(item.porcentaje3)%; height:2rem">
                     Recomendacion
                 </div>
-                <div class="progress-bar progress-bar-danger" role="progressbar" style="width:@(item.porcentaje4)%"></div>
+                <div class="progress-bar progress-bar-danger" role="progressbar" style="width:@(item.porcentaje4)%; height:2rem"></div>
             </div>
         </div>
 
